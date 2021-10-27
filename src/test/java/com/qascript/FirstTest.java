@@ -13,7 +13,7 @@ public class FirstTest {
     public void OpenBrowser()  {
         WebDriver driver;
         
-String chromedriverPath=System.getProperty("user.dir")+"/src/test/resources/";
+        String chromedriverPath=System.getProperty("user.dir")+"/src/test/resources/";
 		
 		
 		System.out.println(System.getProperty("os.name"));
@@ -24,6 +24,12 @@ String chromedriverPath=System.getProperty("user.dir")+"/src/test/resources/";
 			
 				
 			  chromedriverPath+= "linux/chromedriver";
+			//chromedriverPath = "/usr/bin/chromedriver";
+			   
+		}if  (System.getProperty("os.name").toLowerCase().contains("mac")){
+			
+			
+			  chromedriverPath+= "mac/chromedriver";
 			//chromedriverPath = "/usr/bin/chromedriver";
 			   
 		}
