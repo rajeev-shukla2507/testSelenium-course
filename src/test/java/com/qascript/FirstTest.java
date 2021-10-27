@@ -1,16 +1,17 @@
 package com.qascript;
 
-import org.junit.Assert;
-import org.junit.Test;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class FirstTest {
 
 
-    @Test
-    public void OpenBrowser()  {
+	@Test
+    public void testOpenBrowser()  {
         WebDriver driver;
         
         String chromedriverPath=System.getProperty("user.dir")+"/src/test/resources/";
@@ -44,7 +45,7 @@ public class FirstTest {
         driver.manage().window().maximize();
         driver.get("https://www.google.com");
         System.out.println("Title of the page is: " + driver.getTitle());
-        Assert.assertTrue("Page title is not correct",driver.getTitle().equals("Google"));
+        Assert.assertTrue(driver.getTitle().equals("Google"),"Page title is not correct");
     }
 
 
