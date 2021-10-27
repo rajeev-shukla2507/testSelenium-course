@@ -15,12 +15,17 @@ public class FirstTest {
         
 String chromedriverPath=System.getProperty("user.dir")+"/src/test/resources/chromedriver";
 		
+		
 		System.out.println(System.getProperty("os.name"));
 		if(System.getProperty("os.name").toLowerCase().contains("win")){
 			   chromedriverPath+=".exe";
 				
 		}else if (System.getProperty("os.name").toLowerCase().contains("linux")){
+			
+				
 			   chromedriverPath+="_linux";
+			   
+			   String[] cmd = { "sh", "chmod 777 "+ chromedriverPath};
 		}
 			
 		System.out.println("chromedriverPath: "+chromedriverPath);
