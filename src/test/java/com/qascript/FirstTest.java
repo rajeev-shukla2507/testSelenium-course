@@ -23,9 +23,9 @@ String chromedriverPath=System.getProperty("user.dir")+"/src/test/resources/chro
 		}else if (System.getProperty("os.name").toLowerCase().contains("linux")){
 			
 				
-			   chromedriverPath+="_linux";
+			   //chromedriverPath+="_linux";
+			chromedriverPath = "/usr/bin/chromedriver";
 			   
-			   String[] cmd = { "sh", "chmod 777 "+ chromedriverPath};
 		}
 			
 		System.out.println("chromedriverPath: "+chromedriverPath);
