@@ -13,18 +13,18 @@ public class FirstTest {
     public void OpenBrowser()  {
         WebDriver driver;
         
-String chromedriverPath=System.getProperty("user.dir")+"/src/test/resources/chromedriver";
+String chromedriverPath=System.getProperty("user.dir")+"/src/test/resources/";
 		
 		
 		System.out.println(System.getProperty("os.name"));
 		if(System.getProperty("os.name").toLowerCase().contains("win")){
-			   chromedriverPath+=".exe";
+			   chromedriverPath+="win/chromedriver.exe";
 				
 		}else if (System.getProperty("os.name").toLowerCase().contains("linux")){
 			
 				
-			   //chromedriverPath+="_linux";
-			chromedriverPath = "/usr/bin/chromedriver";
+			  chromedriverPath+= "linux/chromedriver";
+			//chromedriverPath = "/usr/bin/chromedriver";
 			   
 		}
 			
